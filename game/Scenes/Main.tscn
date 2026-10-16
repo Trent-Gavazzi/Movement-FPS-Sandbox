@@ -1,3 +1,19 @@
 [gd_scene format=3 uid="uid://b3j3xbhcuetq5"]
 
-[node name="Node3D" type="Node3D" unique_id=187405626]
+[ext_resource type="PackedScene" uid="uid://bccgmettrmf50" path="res://Models/GreyBox1.glb" id="1_r150o"]
+[ext_resource type="PackedScene" uid="uid://dftrpkfy22rxb" path="res://Scenes/Player.tscn" id="2_idj7w"]
+
+[node name="Main" type="Node3D" unique_id=187405626]
+
+[node name="Player" parent="." unique_id=1095114695 instance=ExtResource("2_idj7w")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1361738340]
+transform = Transform3D(0.90630776, 0.34618863, -0.24240388, 0, 0.57357645, 0.81915206, 0.42261827, -0.74240386, 0.5198368, 0, 48.33709, 0)
+
+[node name="GreyBox1" parent="." unique_id=389859558 instance=ExtResource("1_r150o")]
+transform = Transform3D(10, 0, 0, 0, 10, 0.0012097533, 0, -0.0012097533, 10, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=867670103]
+transform = Transform3D(0.035488803, 0.48967975, -0.87117976, -0.019931303, 0.87190235, 0.489274, 0.99917126, -1.110223e-16, 0.040702727, -32.61862, 18.304182, 0)
+
+[editable path="Player"]
